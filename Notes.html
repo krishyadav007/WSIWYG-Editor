@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes taker</title>
+</head>
+<style>
+.full {
+  height : 93vh;
+}
+.scroll {
+  overflow-y: scroll;
+}
+</style>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Navbar goes here -->
+    <!-- Page Layout here -->
+    <div class="row">
+
+      <div class="col full card s12 m4 l3 scroll teal">
+          <h4 class="center">Style text</h4>
+          
+          <div id="bold" name="bold" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_bold</i>bold</h7>
+          </div>
+          
+		  <div id="italic" name="italic" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_italic</i>italic</h7>
+          </div>
+			
+		  <div id="underline" name="underline" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_underlined</i>underline</h7>
+          </div>
+
+          <div id="strikeThrough" name="strikeThrough" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_strikethrough</i>strikeThrough</h7>
+          </div>
+			
+		  <div id="subscript" name="subscript" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left"></i>subscript</h7>
+          </div>
+			
+		  <div id="superscript" name="superscript" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_bold</i>superscript</h7>
+          </div>
+
+          <h4 class="center">Action</h4>
+          
+		  <div id="copy" name="copy" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">content_copy</i>copy</h7>
+          </div>
+
+          <div id="cut" name="cut" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">content_cut</i>cut</h7>
+          </div>
+
+          <div id="paste" name="paste" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">content_paste</i>paste</h7>
+          </div>
+
+          <div id="adelete" name="adelete" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">delete</i>delete</h7>
+          </div>
+
+          <div id="forwardDelete" name="forwardDelete" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">label</i>Forward Delete</h7>
+          </div>
+
+
+          <h4 class="center">URL</h4>
+
+          <div id="createLink" name="createLink" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">insert_link</i>createLink</h7>
+          </div>
+
+
+		  <div id="unlink" name="unlink" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">link</i>unlink</h7>
+          </div>
+
+		  <h4 class="center">Font</h4>
+          
+          <div id="fontName" name="fontName" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_bold</i>Font Name</h7>
+          </div>
+          
+          <div id="increaseFontSize" name="increaseFontSize" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_size</i>Increase Font Size</h7>
+          </div>
+
+          <div id="decreaseFontSize" name="decreaseFontSize" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_size</i>Decrease font size</h7>
+          </div>
+          
+          <div id="fontSize" name="fontSize" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_size</i>Font Size</h7>
+          </div>
+
+		  <div id="foreColor" name="foreColor" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_color_text</i>Font color</h7>
+          </div>
+
+          <div id="backColor" name="backColor" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">font_download</i>Background color</h7>
+          </div>
+
+          <div id="hiliteColor" name="hiliteColor" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">highlight</i>Highlight colour</h7>
+          </div>
+
+
+		  <div id="heading" name="heading" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_size</i>heading</h7>
+          </div>
+           
+          <h4 class="center">Insert</h4>
+
+          <div id="insertBrOnReturn" name="insertBrOnReturn" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">straighten</i>Insert brek row</h7>
+          </div>
+          
+          <div id="insertHorizontalRule" name="insertHorizontalRule" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">straighten</i>Insert Horizontal Rule</h7>
+          </div>
+
+		  <div id="insertHTML" name="insertHTML" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">code</i>Insert HTML</h7>
+          </div>
+
+		  <div id="insertImage" name="insertImage" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">image</i>Insert Image</h7>
+          </div>
+
+		  <div id="insertOrderedList" name="insertOrderedList" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_list_numbered</i>Insert Ordered List</h7>
+          </div>
+
+          <div id="insertUnorderedList" name="insertUnorderedList" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_list_bulleted</i>Insert Unordered List</h7>
+          </div>
+
+		  <div id="insertParagraph" name="insertParagraph" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_textdirection_l_to_r</i>Insert Paragraph</h7>
+          </div>
+
+          <div id="insertText" name="insertText" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">play_arrow</i>Insert Text</h7>
+          </div>
+          
+          <div id="formatBlock" name="formatBlock" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">add_box</i>Format block</h7>
+          </div>
+
+ 		  <div id="removeFormat" name="removeFormat" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_clear</i>removeFormat</h7>
+          </div>
+
+          <h4 class="center">Align</h4>
+
+		  <div id="justifyCenter" name="justifyCenter" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_align_center</i>Justify Center</h7>
+          </div>
+
+		  <div id="justifyFull" name="justifyFull" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_align_justify</i>Justify Full</h7>
+          </div>
+
+		  <div id="justifyLeft" name="justifyLeft" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_align_left</i>Justify Left</h7>
+          </div>
+
+		  <div id="justifyRight" name="justifyRight" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_align_right</i>Justify Right</h7>
+          </div>
+
+          <div id="indent" name="indent" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_indent_increase</i>Increase indent</h7>
+          </div>
+
+		  <div id="outdent" name="outdent" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_indent_decrease</i>Decrease indent</h7>
+          </div>
+			
+		  <h4 class="center">Settings</h4>
+
+		  <div id="redo" name="redo" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">redo</i>Redo</h7>
+          </div>
+
+		  <div id="undo" name="undo" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">undo</i>Undo</h7>
+          </div>
+
+		  <div id="selectAll" name="selectAll" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_bold</i>Select All</h7>
+          </div>
+
+		  <div id="useCSS" name="useCSS" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">code</i>Use CSS</h7>
+          </div>
+			
+		  <div id="styleWithCSS" name="styleWithCSS" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">code</i>Style with CSS</h7>
+          </div>
+
+          <div id="enableInlineTableEditing" name="enableInlineTableEditing" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">view_comfy</i>Enable inline table editing</h7>
+          </div>
+
+          <div id="enableObjectResizing" name="enableObjectResizing" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">format_shapes</i>Enable object resizing</h7>
+          </div>
+          
+          <div id="contentReadOnly" name="contentReadOnly" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">lock_outline</i>Content lock</h7>
+          </div>
+          
+		  <h4 class="center">Export</h4>
+
+		  <div id="asHtml" name="asHtml" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">redo</i>As HTML</h7>
+          </div>
+
+		  <div id="asText" name="asText" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">redo</i>As TEXT</h7>
+          </div>
+
+		  <div id="asPDF" name="asPDF" class="card col s12 waves-effect waves-light btn-large">
+			<h7><i class="material-icons left">redo</i>As PDF</h7>
+          </div>
+
+      </div>
+
+      <div class="col full card s12 m8 l9 scroll"> <!-- Note that "m8 l9" was added -->
+      	<div class="row" contentEditable="true">
+          <div id="editor" name="editor" class="col s12">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper in nunc at mattis. Suspendisse metus augue, pellentesque finibus luctus dictum, tempor id nunc. Phasellus semper magna ac interdum scelerisque. Vestibulum laoreet sapien a nisi ullamcorper, nec luctus neque eleifend. Aliquam vel tortor justo. Nam aliquam dapibus mi ut volutpat. Donec eros turpis, gravida et neque nec, interdum pulvinar nibh. Ut vel sodales nulla, a tempus sem. Nunc facilisis pretium aliquam. Proin nulla ante, congue at purus sit amet, commodo placerat erat. Sed malesuada eros nulla, in cursus urna elementum finibus. Suspendisse posuere purus pellentesque rutrum tempor. Nunc nec tincidunt est. Sed convallis ligula quis dui laoreet maximus. Nulla pharetra placerat quam ut rutrum. Nullam sit amet vehicula nisi.</p>
+        </div>
+      </div>
+
+    </div>
+          
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="fileSaver.js"></script>
+    <script src="note.js"></script>
+</body>
+</html>
